@@ -1,0 +1,130 @@
+Hello everyone, my name is Ahmed Al-Dabouqi, I'm 24 years old, I graduated from Al-Zaytoonah University in the Department of Computer Information Systems 
+and trained in the field of Android development applications, but one day I decided to change my field of work 
+because of the languages that suddenly appeared in the field of mobile phone applications. Later on, 
+I might work in a language and suddenly another language appears, or if I work in a company, maybe suddenly my employer is terminating my services 
+because I'm working in an old language, which confuses me a little!
+And I Have Previous experiences that give a boost to my new career in tech (Android, Java, SQL, Firebase, QA).
+
+=> what ur hobbies ?
+1) Video Games
+2) Sports
+3) Cooking
+4) Reading
+
+=> what are u doing in ur spare time?
+read books, show movies, going for a walk.
+
+=> whar are u doing in ur day ?
+wake up early and do I pray Al-fajr, eat my breakfast, make a coffee cup, 
+and start studying and coding using the Udemy website and other stuff.....
+
+
+=> why we should hire u ?
+Answer: As I have just started my career, I don’t have practical achievements,
+ but I really want to practically explore and experience my potential by delivering the best services to the company.
+ It will be my honor to work with you and this company.
+
+=> tell us about ur graduation project ?
+The application idea was brought to light from the need for an application that provides 
+the tourists who have never been to Jordan before or have vague knowledge about what to do in Jordan,
+ where to go, and how to get the most out of their time.
+This app offers a collection of tours both ranked by top-rated (peoples favorites) or the user's interests, 
+each tour includes a collection of iconic tourist attraction places.
+We plan to help the tourists to navigate through Jordan without needing the help of a guide or a tourist office 
+that might overcharge them or scam them in some way or another.
+
+تم تسليط الضوء على فكرة التطبيق من الحاجة إلى تطبيق يوفر للسائحين الذين لم يسبق لهم زيارة الأردن من قبل أو لديهم معرفة غامضة حول ما يجب القيام به في الأردن ، وأين يذهبون ، وكيفية تحقيق أقصى استفادة من وقتهم.
+يقدم هذا التطبيق مجموعة من الجولات مرتبة حسب أعلى تصنيف (مفضلات الأشخاص) أو اهتمامات المستخدم ، وتتضمن كل جولة مجموعة من أماكن الجذب السياحي الشهيرة. نخطط لمساعدة السائحين على الإبحار عبر الأردن دون الحاجة إلى مساعدة مرشد سياحي أو مكتب سياحي قد يزيد من تكلفتهم أو يخدعهم بطريقة أو بأخرى.
+
+x=5 y=6  // output x=6 y=5
+
+const swap = function (x, y) {
+x = x + y;
+ y = x - y;
+x = x - y;
+
+  // or
+
+const temp = x;
+ x = y;
+ y = temp;
+
+  return `x = ${x} , y: ${y}`;
+};
+console.log(swap(5, 6));  // x = 6 , y: 5
+//////////////////////////////////////////////////////////////////////////////////////////
+// [10, 25, 15, 40, 5, 30] // find second max value
+
+let secondMax = function (arr){
+    let max = Math.max.apply(null, arr); // get the max of the array
+    arr.splice(arr.indexOf(max), 1);           // remove max from the array
+    return Math.max.apply(null, arr);      // get the 2nd max
+};
+secondMax([10, 25, 15, 40, 5, 30]); 
+
+let arr = [10, 25, 15, 40, 5, 30];
+arr.sort(function(a,b){
+    return b-a;
+});
+console.log(arr[1]);
+
+[10, 25, 15, 40, 5, 30].sort(function(a, b) { return b - a; })[1];
+/////////////////////////////////////////////////////////////////////////////////////////
+// string  0 0 0 1 1 1 1 1
+// return true if the array contain 5 same number beside each other
+
+const fiveDuplicates = function (arr) {
+  for (let i = 0; i < arr.length - 2; i++) {
+    if (
+      arr[i] === arr[i + 1] &&
+      arr[i] === arr[i + 2] &&
+      arr[i] === arr[i + 3] &&
+      arr[i] === arr[i + 4]
+    )
+      return true;
+  }
+  return false;
+};
+
+console.log(fiveDuplicates([0, 0, 0, 1, 1, 1, 1, 1])); //true
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// [0,1,0,3,12] // output [1,3,12,0,0]
+
+function MovesZeros(arr) {
+  let j = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 0) {
+      arr.splice(i, 1);
+      j++;
+      i--;
+    }
+  }
+  for (let k = 0; k < j; k++) {
+    arr.push(0);
+  }
+  return arr;
+}
+console.log(MovesZeros([1, 2, 0, 0, 2, 3, 4, 0, 7]));
+
+//////////////////////////////////////////////////////////////////////////////////////////
+reverse string
+
+const reverseStr = function (str) {
+  return str.split(' ').reverse().join(' ');
+};
+console.log(reverseStr('I Like Food')); // Food Like I
+//////////////////////////////////////////////////////////////////////////////////////////
+The .sort() method sorts the array in-place, so if necessary we can make a copy while sorting by using the syntax […array].sort() .
+Sorting an array in JavaScript is actually pretty powerful because of how comparison functions work: -1 for <, 0, and 1 for >.
+
+const transactions = [16.37, 2.33, 4.55, 13.44, 1.25];
+transactions .sort((a,b)=>a-b);  // [1.25, 2.33, 4.55, 13.44, 16.37]
+//////////////////////////////////////////////////////////////////////////////////////////
+palindromes :  is a word that reads the same backword as forward.
+
+const isPalindrome = str => str === str.split('').reverse().join('');
+isPalindrome('noon');    //true
+isPalindrome('moon');  // false
+isPalindrome('level');   //true
